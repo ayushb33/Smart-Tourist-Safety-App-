@@ -24,7 +24,7 @@ body {
   position: relative;
 }
 
-/* ===== HEADER SECTION ===== */
+/* ===== ENHANCED HEADER SECTION ===== */
 .map-header {
   background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(20px);
@@ -32,6 +32,7 @@ body {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 1000;
+  padding: 25px 50px;
 }
 
 .map-header::before {
@@ -55,19 +56,21 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 25px 40px;
-  gap: 30px;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
   flex-wrap: wrap;
 }
 
-/* Title Section */
+/* Left Section - Title */
 .title-section {
-  flex: 1;
+  flex: 1 1 300px;
+  min-width: 280px;
   max-width: 400px;
 }
 
 .title-section h2 {
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   font-weight: 900;
   margin: 0 0 8px 0;
   background: linear-gradient(135deg, #667eea, #764ba2);
@@ -85,41 +88,51 @@ body {
   opacity: 0.9;
 }
 
-/* Map Controls */
+/* Right Section - Controls */
 .map-controls {
+  flex: 2 1 auto;
   display: flex;
   align-items: center;
-  gap: 25px;
+  justify-content: center;
+  gap: 30px;
   flex-wrap: wrap;
+  min-width: 600px;
 }
 
-.view-type-controls {
+/* Individual Control Groups */
+.view-type-controls,
+.filter-controls {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  min-width: 160px;
 }
 
-.view-type-controls label {
+.view-type-controls label,
+.filter-controls label {
   font-size: 0.75rem;
   font-weight: 700;
   color: #475569;
   text-transform: uppercase;
   letter-spacing: 1px;
+  text-align: center;
 }
 
+/* View Type Buttons */
 .view-type-buttons {
   display: flex;
   background: rgba(226, 232, 240, 0.8);
   border-radius: 30px;
   padding: 4px;
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-width: 280px;
 }
 
 .view-type-btn {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 20px;
+  padding: 12px 18px;
   border: none;
   border-radius: 26px;
   background: transparent;
@@ -128,8 +141,9 @@ body {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  min-width: 140px;
+  flex: 1;
   justify-content: center;
+  white-space: nowrap;
 }
 
 .view-type-btn.active {
@@ -153,21 +167,7 @@ body {
   transform: scale(1.1);
 }
 
-/* Filter Controls */
-.filter-controls {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.filter-controls label {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #475569;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
+/* Filter Dropdown */
 .zone-filter {
   padding: 12px 18px;
   border: 2px solid rgba(226, 232, 240, 0.8);
@@ -180,6 +180,7 @@ body {
   transition: all 0.3s ease;
   min-width: 160px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
 }
 
 .zone-filter:hover {
@@ -194,14 +195,17 @@ body {
   box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
 }
 
-/* Toggle Controls */
+/* Toggle Controls - Centered and Well Spaced */
 .toggle-controls {
   display: flex;
-  gap: 12px;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  min-width: 250px;
 }
 
 .toggle-btn {
-  padding: 12px 20px;
+  padding: 12px 24px;
   border: 2px solid rgba(102, 126, 234, 0.2);
   border-radius: 24px;
   background: rgba(255, 255, 255, 0.9);
@@ -213,6 +217,26 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
+  white-space: nowrap;
+  min-width: 110px;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.toggle-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.toggle-btn:hover::before {
+  left: 100%;
 }
 
 .toggle-btn.active,
@@ -222,6 +246,24 @@ body {
   border-color: transparent;
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.toggle-btn:hover .btn-icon {
+  transform: scale(1.1);
+}
+
+/* Special styling for Statistics button */
+.stats-btn {
+  background: linear-gradient(135deg, rgba(251, 146, 60, 0.8), rgba(249, 115, 22, 0.8));
+  border-color: rgba(251, 146, 60, 0.4);
+  color: white;
+}
+
+.stats-btn.active,
+.stats-btn:hover {
+  background: linear-gradient(135deg, #fb923c, #f97316);
+  border-color: #fb923c;
+  box-shadow: 0 8px 25px rgba(251, 146, 60, 0.4);
 }
 
 /* ===== MAIN CONTENT AREA ===== */
@@ -520,6 +562,7 @@ body {
   color: #1e293b;
 }
 
+.zone-description,
 .zone-description-enhanced {
   color: #475569;
   font-size: 1rem;
@@ -618,15 +661,30 @@ body {
   border-bottom: 2px solid rgba(102, 126, 234, 0.1);
 }
 
-/* Enhanced Attractions */
+/* Attractions */
+.attractions-section,
 .attractions-section-enhanced {
   margin-bottom: 25px;
 }
 
+.attractions-list,
 .attractions-list-enhanced {
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+
+.attraction-item {
+  background: rgba(248, 250, 252, 0.8);
+  padding: 18px;
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
+  transition: all 0.3s ease;
+}
+
+.attraction-item:hover {
+  background: rgba(226, 232, 240, 0.8);
+  transform: translateX(4px);
 }
 
 .attraction-card-enhanced {
@@ -649,6 +707,13 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 10px;
+}
+
+.attraction-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
 }
 
 .attraction-name {
@@ -691,6 +756,12 @@ body {
   font-weight: 500;
 }
 
+.attraction-timings {
+  color: #64748b;
+  font-size: 0.85rem;
+  margin: 4px 0;
+}
+
 .attraction-details {
   display: flex;
   gap: 20px;
@@ -710,9 +781,16 @@ body {
   font-size: 1rem;
 }
 
-/* Enhanced Facilities */
+/* Facilities */
+.facilities-section,
 .facilities-section-enhanced {
   margin-bottom: 25px;
+}
+
+.facilities-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .facilities-grid {
@@ -721,10 +799,11 @@ body {
   gap: 10px;
 }
 
+.facility-tag,
 .facility-item {
   background: linear-gradient(135deg, #667eea, #764ba2);
   color: white;
-  padding: 10px 15px;
+  padding: 8px 16px;
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 600;
@@ -733,22 +812,26 @@ body {
   box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
 }
 
+.facility-tag:hover,
 .facility-item:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
 }
 
-/* Enhanced Transportation */
+/* Transportation */
+.transportation-section,
 .transportation-section-enhanced {
   margin-bottom: 25px;
 }
 
+.transportation-list,
 .transportation-list-enhanced {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
+.transport-item,
 .transport-item-enhanced {
   display: flex;
   align-items: center;
@@ -761,6 +844,7 @@ body {
   transition: all 0.3s ease;
 }
 
+.transport-item:hover,
 .transport-item-enhanced:hover {
   background: rgba(226, 232, 240, 0.8);
   transform: translateX(4px);
@@ -771,17 +855,20 @@ body {
   color: #10b981;
 }
 
-/* Enhanced Tips */
+/* Tips */
+.tips-section,
 .tips-section-enhanced {
   margin-bottom: 25px;
 }
 
+.tips-list,
 .tips-list-enhanced {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
+.tip-item,
 .tip-item-enhanced {
   display: flex;
   align-items: flex-start;
@@ -802,6 +889,92 @@ body {
   margin-top: 2px;
   font-size: 1.1rem;
   flex-shrink: 0;
+}
+
+/* Safety Features */
+.safety-features-section {
+  margin-bottom: 25px;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  background: rgba(248, 250, 252, 0.8);
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+
+.feature-bullet {
+  color: #10b981;
+  font-weight: 800;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* Emergency Contacts */
+.emergency-contacts-section {
+  margin-bottom: 25px;
+}
+
+.emergency-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.emergency-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: rgba(248, 250, 252, 0.8);
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+
+.emergency-icon {
+  font-size: 1.2rem;
+  color: #ef4444;
+}
+
+.emergency-text {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* Risk Section */
+.risk-section {
+  margin-bottom: 25px;
+}
+
+.risk-description {
+  color: #dc2626;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.recommended-time-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.time-icon {
+  font-size: 1rem;
 }
 
 /* Additional Info */
@@ -835,12 +1008,24 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  animation: slideInFromRight 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .statistics-header {
   padding: 25px 30px;
   color: white;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #fb923c 0%, #f97316 100%);
   position: relative;
   display: flex;
   align-items: center;
@@ -848,15 +1033,10 @@ body {
 }
 
 .statistics-header h3 {
-  margin: 0 0 5px 0;
+  margin: 0;
   font-size: 1.4rem;
   font-weight: 800;
-}
-
-.statistics-header p {
-  margin: 0;
-  opacity: 0.9;
-  font-size: 0.95rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .statistics-body {
@@ -890,15 +1070,15 @@ body {
 }
 
 .stat-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
 .stat-card.primary { background: linear-gradient(135deg, #667eea, #764ba2); }
 .stat-card.secondary { background: linear-gradient(135deg, #f093fb, #f5576c); }
 .stat-card.accent { background: linear-gradient(135deg, #4facfe, #00f2fe); }
 .stat-card.success { background: linear-gradient(135deg, #43e97b, #38f9d7); }
-.stat-card.warning { background: linear-gradient(135deg, #fa709a, #fee140); }
+.stat-card.warning { background: linear-gradient(135deg, #fa709a, #fee140); color: #333; }
 .stat-card.danger { background: linear-gradient(135deg, #ff9a9e, #fecfef); color: #333; }
 .stat-card.info { background: linear-gradient(135deg, #a8edea, #fed6e3); color: #333; }
 
@@ -936,7 +1116,7 @@ body {
   background: rgba(248, 250, 252, 0.8);
   padding: 20px;
   border-radius: 16px;
-  border-left: 4px solid #667eea;
+  border-left: 4px solid #fb923c;
 }
 
 .stats-section h4 {
@@ -964,6 +1144,29 @@ body {
 .stats-icon {
   font-size: 1.2rem;
 }
+
+/* Zone Distribution */
+.zone-distribution {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.zone-stat {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.zone-bar {
+  height: 8px;
+  border-radius: 4px;
+  min-width: 20px;
+}
+
+.zone-bar.heritage { background: #8B4513; }
+.zone-bar.modern { background: #4169E1; }
+.zone-bar.spiritual { background: #FFD700; }
 
 /* ===== EMPTY STATE ===== */
 .no-zone-selected {
@@ -1108,19 +1311,66 @@ body {
   opacity: 0.8;
 }
 
+/* ===== ENHANCED BUTTON INTERACTIONS ===== */
+.header-content > * {
+  flex-shrink: 0;
+}
+
+.map-controls > * {
+  margin: 0 8px;
+}
+
+.toggle-controls > * {
+  margin: 0 6px;
+}
+
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 1400px) {
+  .header-content {
+    padding: 0 30px;
+  }
+  
+  .map-controls {
+    min-width: 500px;
+    gap: 25px;
+  }
+  
   .map-content {
     gap: 25px;
     padding: 25px 30px;
   }
-  
-  .header-content {
-    padding: 20px 30px;
-  }
 }
 
 @media (max-width: 1200px) {
+  .map-header {
+    padding: 20px 30px;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+  }
+  
+  .title-section {
+    max-width: 100%;
+    flex: none;
+  }
+  
+  .map-controls {
+    min-width: auto;
+    justify-content: center;
+    flex: none;
+    width: 100%;
+  }
+  
+  .toggle-controls {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
   .map-content {
     grid-template-columns: 1fr;
     height: auto;
@@ -1146,6 +1396,42 @@ body {
   
   .stats-grid {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .map-controls {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .view-type-controls,
+  .filter-controls {
+    min-width: auto;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .view-type-buttons {
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .zone-filter {
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .toggle-controls {
+    width: 100%;
+    justify-content: space-evenly;
+    gap: 12px;
+  }
+  
+  .toggle-btn {
+    min-width: 90px;
+    padding: 10px 16px;
+    font-size: 0.85rem;
   }
 }
 
@@ -1193,6 +1479,14 @@ body {
   .toggle-controls {
     width: 100%;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .toggle-btn {
+    min-width: 150px;
+    width: 150px;
   }
   
   .map-content {
@@ -1218,6 +1512,34 @@ body {
 }
 
 @media (max-width: 480px) {
+  .map-header {
+    padding: 15px 20px;
+  }
+  
+  .title-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .view-type-btn {
+    padding: 10px 12px;
+    font-size: 0.8rem;
+  }
+  
+  .btn-text {
+    display: none;
+  }
+  
+  .btn-icon {
+    font-size: 1.2rem;
+  }
+  
+  .toggle-btn {
+    min-width: 120px;
+    width: 120px;
+    padding: 10px 12px;
+    font-size: 0.8rem;
+  }
+  
   .map-container {
     height: 350px;
   }
@@ -1232,14 +1554,6 @@ body {
     min-width: auto;
   }
   
-  .btn-text {
-    display: none;
-  }
-  
-  .btn-icon {
-    font-size: 1.3rem;
-  }
-  
   .toggle-controls {
     flex-direction: column;
     width: 100%;
@@ -1249,12 +1563,21 @@ body {
     width: 100%;
   }
   
-  .title-section h2 {
-    font-size: 1.5rem;
-  }
-  
   .map-content {
     padding: 15px;
+  }
+}
+
+/* Ensure proper alignment on all screen sizes */
+@media (min-width: 1200px) {
+  .map-controls {
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 1199px) {
+  .map-controls {
+    justify-content: center;
   }
 }
 
@@ -1355,4 +1678,3 @@ body {
     color: black !important;
   }
 }
-
