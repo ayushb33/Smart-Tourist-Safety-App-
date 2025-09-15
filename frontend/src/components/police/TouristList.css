@@ -1,0 +1,805 @@
+/* Improved Modal Styles for Uniform Design */
+/* Scoped Tourist List Component Styles */
+.tourist-list-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px 30px;
+}
+
+.tourist-list-container .container-fluid {
+  max-width: 1400px;
+  margin: 0 auto;
+  background: transparent;
+}
+
+/* Scope all styles to the container */
+.tourist-list-container .card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.tourist-list-container .card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.tourist-list-container .card-header {
+  background: rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 30px 40px;
+  color: white;
+}
+
+.tourist-list-container .card-header h3 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Continue scoping ALL selectors with .tourist-list-container prefix */
+.tourist-list-container .btn {
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tourist-list-container .btn-primary {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+}
+
+/* ... Continue for all other selectors ... */
+
+
+
+/* Scoped Tourist List Component Styles */
+.tourist-list-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px 30px;
+  margin-top: 0 !important;
+}
+
+.tourist-list-container .container-fluid {
+  max-width: 1400px;
+  margin: 0 auto;
+  background: transparent;
+}
+
+/* Card Styling */
+.tourist-list-container .card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.tourist-list-container .card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.tourist-list-container .card-header {
+  background: rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 30px 40px;
+  color: white;
+}
+
+.tourist-list-container .card-header h3 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.tourist-list-container .card-header h5 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.tourist-list-container .card-header p {
+  font-size: 1.1rem;
+  margin: 8px 0 0 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+.tourist-list-container .card-body {
+  padding: 30px 40px;
+  color: white;
+}
+
+/* Dashboard Statistics Grid */
+.tourist-list-container .dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.tourist-list-container .stat-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 30px 25px;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.tourist-list-container .stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.tourist-list-container .stat-card:hover::before {
+  left: 100%;
+}
+
+.tourist-list-container .stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.tourist-list-container .stat-number {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 8px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  line-height: 1;
+}
+
+.tourist-list-container .stat-number.text-primary { color: #60a5fa !important; }
+.tourist-list-container .stat-number.text-success { color: #34d399 !important; }
+.tourist-list-container .stat-number.text-danger { color: #f87171 !important; }
+.tourist-list-container .stat-number.text-warning { color: #fbbf24 !important; }
+
+.tourist-list-container .stat-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+/* Form Controls */
+.tourist-list-container .form-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tourist-list-container .form-control {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 12px 16px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.tourist-list-container .form-control:focus {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+  outline: none;
+  color: white;
+}
+
+.tourist-list-container .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.tourist-list-container .form-control option {
+  background: #2c3e50;
+  color: white;
+}
+
+/* Table Styling */
+.tourist-list-container .table-responsive {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.tourist-list-container .table {
+  margin: 0;
+  color: white;
+  background: transparent;
+}
+
+.tourist-list-container .table thead th {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  padding: 20px 15px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.tourist-list-container .table tbody tr {
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.tourist-list-container .table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.01);
+}
+
+.tourist-list-container .table tbody td {
+  padding: 18px 15px;
+  border: none;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 500;
+  vertical-align: middle;
+}
+
+.tourist-list-container .table tbody td strong {
+  color: white;
+  font-weight: 700;
+}
+
+.tourist-list-container .table tbody td .text-primary {
+  color: #60a5fa !important;
+  font-weight: 700;
+}
+
+.tourist-list-container .table tbody td .text-muted {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.tourist-list-container .table tbody td .text-danger {
+  color: #f87171 !important;
+}
+
+.tourist-list-container .table tbody td a {
+  color: #60a5fa;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.tourist-list-container .table tbody td a:hover {
+  color: #93c5fd;
+  text-decoration: underline;
+}
+
+/* Badge Styling */
+.tourist-list-container .badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  border: 1px solid transparent;
+}
+
+.tourist-list-container .badge.bg-primary {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
+  color: white;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+}
+
+.tourist-list-container .badge.bg-success {
+  background: linear-gradient(135deg, #10b981, #059669) !important;
+  color: white;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+}
+
+.tourist-list-container .badge.bg-danger {
+  background: linear-gradient(135deg, #ef4444, #dc2626) !important;
+  color: white;
+  box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
+}
+
+.tourist-list-container .badge.bg-warning {
+  background: linear-gradient(135deg, #f59e0b, #d97706) !important;
+  color: white;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+}
+
+.tourist-list-container .badge.bg-info {
+  background: linear-gradient(135deg, #06b6d4, #0891b2) !important;
+  color: white;
+  box-shadow: 0 4px 15px rgba(6, 182, 212, 0.4);
+}
+
+.tourist-list-container .badge.bg-secondary {
+  background: linear-gradient(135deg, #6b7280, #4b5563) !important;
+  color: white;
+  box-shadow: 0 4px 15px rgba(107, 114, 128, 0.4);
+}
+
+/* Button Styling */
+.tourist-list-container .btn {
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.tourist-list-container .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.tourist-list-container .btn-primary {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+}
+
+.tourist-list-container .btn-primary:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e3a8a);
+  color: white;
+}
+
+.tourist-list-container .btn-success {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+}
+
+.tourist-list-container .btn-success:hover {
+  background: linear-gradient(135deg, #059669, #047857);
+  color: white;
+}
+
+.tourist-list-container .btn-danger {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+  box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
+}
+
+.tourist-list-container .btn-danger:hover {
+  background: linear-gradient(135deg, #dc2626, #b91c1c);
+  color: white;
+}
+
+.tourist-list-container .btn-warning {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+}
+
+.tourist-list-container .btn-warning:hover {
+  background: linear-gradient(135deg, #d97706, #b45309);
+  color: white;
+}
+
+.tourist-list-container .btn-info {
+  background: linear-gradient(135deg, #06b6d4, #0891b2);
+  color: white;
+  box-shadow: 0 4px 15px rgba(6, 182, 212, 0.4);
+}
+
+.tourist-list-container .btn-info:hover {
+  background: linear-gradient(135deg, #0891b2, #0e7490);
+  color: white;
+}
+
+.tourist-list-container .btn-secondary {
+  background: linear-gradient(135deg, #6b7280, #4b5563);
+  color: white;
+  box-shadow: 0 4px 15px rgba(107, 114, 128, 0.4);
+}
+
+.tourist-list-container .btn-secondary:hover {
+  background: linear-gradient(135deg, #4b5563, #374151);
+  color: white;
+}
+
+.tourist-list-container .btn-group-vertical .btn {
+  margin-bottom: 6px;
+  border-radius: 12px;
+}
+
+.tourist-list-container .btn-group-vertical .btn:last-child {
+  margin-bottom: 0;
+}
+
+/* Loading Spinner */
+.tourist-list-container .loading-spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Alert Styling */
+.tourist-list-container .alert {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 20px 25px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.tourist-list-container .alert.alert-info {
+  border-left: 4px solid #06b6d4;
+  background: rgba(6, 182, 212, 0.1);
+}
+
+.tourist-list-container .alert-heading {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: white;
+}
+
+/* Enhanced Modal Styling */
+.tourist-list-container .modal.show {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+}
+
+.tourist-list-container .modal-dialog {
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+.tourist-list-container .modal-content {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+  color: #2c3e50;
+}
+
+.tourist-list-container .modal-header {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  border-bottom: none;
+  border-radius: 20px 20px 0 0;
+  padding: 25px 30px;
+}
+
+.tourist-list-container .modal-header h5 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.tourist-list-container .btn-close-white {
+  filter: brightness(0) invert(1);
+  opacity: 0.8;
+}
+
+.tourist-list-container .btn-close-white:hover {
+  opacity: 1;
+}
+
+/* Info Cards in Modal */
+.tourist-list-container .info-card {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tourist-list-container .info-card-header {
+  padding: 15px 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tourist-list-container .info-card-header.bg-primary {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+
+.tourist-list-container .info-card-header.bg-success {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.tourist-list-container .info-card-header.bg-info {
+  background: linear-gradient(135deg, #06b6d4, #0891b2);
+}
+
+.tourist-list-container .info-card-header.bg-warning {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.tourist-list-container .info-icon {
+  font-size: 1.2rem;
+}
+
+.tourist-list-container .info-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.tourist-list-container .info-card-body {
+  padding: 20px;
+}
+
+.tourist-list-container .info-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(44, 62, 80, 0.1);
+}
+
+.tourist-list-container .info-item:last-child {
+  border-bottom: none;
+}
+
+.tourist-list-container .info-icon-wrapper {
+  width: 35px;
+  height: 35px;
+  background: rgba(52, 152, 219, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.tourist-list-container .info-field-icon {
+  font-size: 1.1rem;
+}
+
+.tourist-list-container .info-content {
+  flex: 1;
+}
+
+.tourist-list-container .info-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #7f8c8d;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 3px;
+}
+
+.tourist-list-container .info-value {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  word-break: break-word;
+}
+
+.tourist-list-container .info-link {
+  color: #3498db !important;
+  text-decoration: none;
+}
+
+.tourist-list-container .info-link:hover {
+  text-decoration: underline;
+}
+
+.tourist-list-container .info-link.emergency {
+  color: #e74c3c !important;
+  font-weight: 700;
+}
+
+.tourist-list-container .modal-footer {
+  border-top: none;
+  padding: 25px 30px;
+  background: rgba(248, 249, 250, 0.8);
+  border-radius: 0 0 20px 20px;
+}
+
+.tourist-list-container .action-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tourist-list-container .action-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* No Results State */
+.tourist-list-container .text-center.py-5 {
+  padding: 60px 40px !important;
+}
+
+.tourist-list-container .text-center.py-5 h5 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.tourist-list-container .text-center.py-5 p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 25px;
+}
+
+/* Text Color Overrides for Better Contrast */
+.tourist-list-container .text-muted {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.tourist-list-container .text-primary {
+  color: #60a5fa !important;
+}
+
+.tourist-list-container .text-success {
+  color: #34d399 !important;
+}
+
+.tourist-list-container .text-danger {
+  color: #f87171 !important;
+}
+
+.tourist-list-container .text-warning {
+  color: #fbbf24 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .tourist-list-container {
+    padding: 15px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tourist-list-container .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .tourist-list-container .card-header {
+    padding: 20px 25px;
+  }
+
+  .tourist-list-container .card-header h3 {
+    font-size: 1.8rem;
+  }
+
+  .tourist-list-container .card-body {
+    padding: 20px 25px;
+  }
+
+  .tourist-list-container .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .tourist-list-container .table-responsive {
+    font-size: 0.85rem;
+  }
+
+  .tourist-list-container .btn-group-vertical .btn {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+  }
+
+  .tourist-list-container .modal-dialog {
+    margin: 15px;
+  }
+
+  .tourist-list-container .action-buttons {
+    flex-direction: column;
+  }
+
+  .tourist-list-container .action-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .tourist-list-container .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tourist-list-container .stat-number {
+    font-size: 2rem;
+  }
+
+  .tourist-list-container .table-responsive {
+    font-size: 0.8rem;
+  }
+
+  .tourist-list-container .info-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+
+
+
+
+/* Specific text color improvements */
+.tourist-list-container .table tbody td .text-primary {
+  color: #1e40af !important; /* Darker blue */
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.tourist-list-container .table tbody td .text-muted {
+  color: #374151 !important; /* Much darker muted text */
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
+}
+
+
+/* Improve link visibility */
+.tourist-list-container .table tbody td a {
+  color: #1d4ed8 !important; /* Darker blue for links */
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);
+  text-decoration: underline;
+}
+
