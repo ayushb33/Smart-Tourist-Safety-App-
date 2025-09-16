@@ -1,0 +1,833 @@
+/* SCOPED TOURIST HOME STYLES - Prevents CSS conflicts */
+.tourist-home-wrapper {
+  min-height: 100vh;
+  background: #f8fafc !important;
+  padding: 20px !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif !important;
+  color: #1e293b !important;
+  line-height: 1.6 !important;
+}
+
+.tourist-container {
+  max-width: 1400px !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 24px !important;
+}
+
+/* Welcome Header */
+.tourist-welcome-header {
+  background: #ffffff !important;
+  border-radius: 16px !important;
+  padding: 30px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+.tourist-welcome-content {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  gap: 20px !important;
+}
+
+.tourist-welcome-left {
+  flex: 1 !important;
+  min-width: 300px !important;
+}
+
+.tourist-welcome-title {
+  font-size: 2.5rem !important;
+  font-weight: 800 !important;
+  color: #1e293b !important;
+  margin: 0 0 12px 0 !important;
+  line-height: 1.2 !important;
+}
+
+.tourist-welcome-subtitle {
+  font-size: 1.2rem !important;
+  color: #64748b !important;
+  margin: 0 0 20px 0 !important;
+  font-weight: 500 !important;
+}
+
+.tourist-location-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: #3b82f6 !important;
+  color: #ffffff !important;
+  padding: 12px 20px !important;
+  border-radius: 25px !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3) !important;
+}
+
+.tourist-location-icon {
+  font-size: 1.2rem !important;
+}
+
+.tourist-location-text {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  max-width: 250px !important;
+}
+
+.tourist-location-spinner {
+  margin-left: 8px !important;
+}
+
+.tourist-spinner {
+  width: 16px !important;
+  height: 16px !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 50% !important;
+  border-top-color: #ffffff !important;
+  animation: tourist-spin 1s linear infinite !important;
+}
+
+@keyframes tourist-spin {
+  to { transform: rotate(360deg); }
+}
+
+.tourist-welcome-right {
+  display: flex !important;
+  align-items: center !important;
+  gap: 20px !important;
+  text-align: right !important;
+}
+
+.tourist-status-icon {
+  font-size: 4rem !important;
+  opacity: 0.8 !important;
+}
+
+.tourist-status-info {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+}
+
+.tourist-status-label {
+  color: #64748b !important;
+  font-size: 0.95rem !important;
+  font-weight: 500 !important;
+}
+
+.tourist-status-time {
+  color: #1e293b !important;
+  font-size: 1.3rem !important;
+  font-weight: 700 !important;
+}
+
+/* Dashboard Stats Grid */
+.tourist-dashboard-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+  gap: 20px !important;
+}
+
+.tourist-stat-card {
+  background: #ffffff !important;
+  border-radius: 16px !important;
+  padding: 28px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+  border: 1px solid #e2e8f0 !important;
+  transition: all 0.3s ease !important;
+}
+
+.tourist-stat-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12) !important;
+}
+
+.tourist-stat-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  margin-bottom: 20px !important;
+}
+
+.tourist-stat-title {
+  color: #1e293b !important;
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+  margin: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.tourist-view-details-btn,
+.tourist-view-all-btn {
+  background: rgba(59, 130, 246, 0.1) !important;
+  color: #3b82f6 !important;
+  border: 1px solid rgba(59, 130, 246, 0.3) !important;
+  border-radius: 20px !important;
+  padding: 8px 16px !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+.tourist-view-details-btn:hover,
+.tourist-view-all-btn:hover {
+  background: rgba(59, 130, 246, 0.2) !important;
+  transform: translateY(-1px) !important;
+}
+
+.tourist-active-badge,
+.tourist-community-badge {
+  padding: 6px 14px !important;
+  border-radius: 14px !important;
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+}
+
+.tourist-active-badge {
+  background: rgba(34, 197, 94, 0.1) !important;
+  color: #16a34a !important;
+  border: 1px solid rgba(34, 197, 94, 0.3) !important;
+}
+
+.tourist-community-badge {
+  background: rgba(59, 130, 246, 0.1) !important;
+  color: #3b82f6 !important;
+  border: 1px solid rgba(59, 130, 246, 0.3) !important;
+}
+
+.tourist-stat-number {
+  font-size: 3rem !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  margin: 12px 0 !important;
+}
+
+.tourist-stat-number.tourist-success { color: #16a34a !important; }
+.tourist-stat-number.tourist-warning { color: #f59e0b !important; }
+.tourist-stat-number.tourist-danger { color: #dc2626 !important; }
+.tourist-stat-number.tourist-info { color: #3b82f6 !important; }
+.tourist-stat-number.tourist-primary { color: #6366f1 !important; }
+
+.tourist-stat-label {
+  color: #64748b !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 16px !important;
+}
+
+.tourist-progress-wrapper {
+  margin-top: 16px !important;
+}
+
+.tourist-progress-bar {
+  height: 8px !important;
+  background: #e2e8f0 !important;
+  border-radius: 4px !important;
+  overflow: hidden !important;
+}
+
+.tourist-progress-fill {
+  height: 100% !important;
+  border-radius: 4px !important;
+  transition: all 0.3s ease !important;
+}
+
+.tourist-progress-fill.tourist-progress-success { background: linear-gradient(90deg, #16a34a, #22c55e) !important; }
+.tourist-progress-fill.tourist-progress-warning { background: linear-gradient(90deg, #f59e0b, #fbbf24) !important; }
+.tourist-progress-fill.tourist-progress-danger { background: linear-gradient(90deg, #dc2626, #ef4444) !important; }
+
+.tourist-status-details {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+  margin-top: 16px !important;
+}
+
+.tourist-status-item {
+  color: #64748b !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+}
+
+.tourist-all-normal {
+  color: #16a34a !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+  margin-top: 12px !important;
+}
+
+.tourist-community-radius {
+  color: #64748b !important;
+  font-size: 0.9rem !important;
+  margin-top: 8px !important;
+}
+
+/* Main Sections */
+.tourist-main-sections {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 24px !important;
+}
+
+.tourist-section-card {
+  background: #ffffff !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+  border: 1px solid #e2e8f0 !important;
+  overflow: hidden !important;
+}
+
+.tourist-section-header {
+  padding: 24px 28px 0 28px !important;
+}
+
+.tourist-section-title {
+  color: #1e293b !important;
+  font-size: 1.4rem !important;
+  font-weight: 700 !important;
+  margin: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+.tourist-section-body {
+  padding: 24px 28px 28px 28px !important;
+}
+
+/* Quick Actions */
+.tourist-actions-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 16px !important;
+  margin-bottom: 24px !important;
+}
+
+.tourist-action-btn {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 24px 16px !important;
+  border: none !important;
+  border-radius: 14px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+  color: #ffffff !important;
+}
+
+.tourist-action-btn.tourist-emergency {
+  background: linear-gradient(135deg, #dc2626, #ef4444) !important;
+}
+
+.tourist-action-btn.tourist-success {
+  background: linear-gradient(135deg, #16a34a, #22c55e) !important;
+}
+
+.tourist-action-btn.tourist-primary {
+  background: linear-gradient(135deg, #3b82f6, #60a5fa) !important;
+}
+
+.tourist-action-btn.tourist-info {
+  background: linear-gradient(135deg, #0ea5e9, #38bdf8) !important;
+}
+
+.tourist-action-btn:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2) !important;
+}
+
+.tourist-action-icon {
+  font-size: 2.2rem !important;
+}
+
+.tourist-action-text {
+  font-size: 1rem !important;
+  line-height: 1.3 !important;
+  color: #ffffff !important;
+}
+
+.tourist-location-update {
+  border-top: 1px solid #e2e8f0 !important;
+  padding-top: 20px !important;
+}
+
+.tourist-location-btn {
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  padding: 14px !important;
+  background: rgba(59, 130, 246, 0.1) !important;
+  color: #3b82f6 !important;
+  border: 1px solid rgba(59, 130, 246, 0.3) !important;
+  border-radius: 12px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  font-size: 1rem !important;
+}
+
+.tourist-location-btn:hover:not(:disabled) {
+  background: rgba(59, 130, 246, 0.2) !important;
+  transform: translateY(-1px) !important;
+}
+
+.tourist-location-btn:disabled {
+  opacity: 0.6 !important;
+  cursor: not-allowed !important;
+}
+
+.tourist-btn-spinner {
+  width: 18px !important;
+  height: 18px !important;
+  border: 2px solid rgba(59, 130, 246, 0.3) !important;
+  border-radius: 50% !important;
+  border-top-color: #3b82f6 !important;
+  animation: tourist-spin 1s linear infinite !important;
+}
+
+/* Recent Activity */
+.tourist-activity-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 20px !important;
+  margin-bottom: 24px !important;
+}
+
+.tourist-activity-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+}
+
+.tourist-activity-icon {
+  flex-shrink: 0 !important;
+}
+
+.tourist-activity-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 10px !important;
+  font-size: 1rem !important;
+}
+
+.tourist-activity-badge.tourist-success {
+  background: rgba(34, 197, 94, 0.1) !important;
+  color: #16a34a !important;
+  border: 1px solid rgba(34, 197, 94, 0.3) !important;
+}
+
+.tourist-activity-badge.tourist-warning {
+  background: rgba(245, 158, 11, 0.1) !important;
+  color: #f59e0b !important;
+  border: 1px solid rgba(245, 158, 11, 0.3) !important;
+}
+
+.tourist-activity-badge.tourist-info {
+  background: rgba(59, 130, 246, 0.1) !important;
+  color: #3b82f6 !important;
+  border: 1px solid rgba(59, 130, 246, 0.3) !important;
+}
+
+.tourist-activity-content {
+  flex: 1 !important;
+}
+
+.tourist-activity-action {
+  color: #1e293b !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  line-height: 1.3 !important;
+}
+
+.tourist-activity-time {
+  color: #64748b !important;
+  font-size: 0.85rem !important;
+  margin-top: 4px !important;
+}
+
+.tourist-empty-activity {
+  text-align: center !important;
+  padding: 40px 20px !important;
+}
+
+.tourist-empty-icon {
+  font-size: 3.5rem !important;
+  margin-bottom: 20px !important;
+  opacity: 0.6 !important;
+}
+
+.tourist-empty-title {
+  color: #1e293b !important;
+  font-weight: 600 !important;
+  margin: 0 0 8px 0 !important;
+  font-size: 1.1rem !important;
+}
+
+.tourist-empty-subtitle {
+  color: #64748b !important;
+  font-size: 0.9rem !important;
+}
+
+/* Weather Section */
+.tourist-weather-section {
+  margin-top: 24px !important;
+  padding: 20px !important;
+  background: #f8fafc !important;
+  border-radius: 12px !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+.tourist-weather-title {
+  color: #1e293b !important;
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  margin: 0 0 16px 0 !important;
+}
+
+.tourist-weather-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 16px !important;
+  text-align: center !important;
+}
+
+.tourist-weather-item {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+}
+
+.tourist-weather-value {
+  color: #1e293b !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+}
+
+.tourist-weather-label {
+  color: #64748b !important;
+  font-size: 0.8rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  font-weight: 600 !important;
+}
+
+/* Bottom Sections */
+.tourist-bottom-sections {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 24px !important;
+}
+
+/* Emergency Contacts */
+.tourist-contacts-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+  margin-bottom: 24px !important;
+}
+
+.tourist-contact-item {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 16px !important;
+  background: #f8fafc !important;
+  border-radius: 12px !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+.tourist-contact-info {
+  flex: 1 !important;
+}
+
+.tourist-contact-name {
+  color: #1e293b !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+}
+
+.tourist-contact-number {
+  color: #64748b !important;
+  font-size: 0.9rem !important;
+  margin-top: 4px !important;
+}
+
+.tourist-call-btn {
+  background: rgba(220, 38, 38, 0.1) !important;
+  color: #dc2626 !important;
+  border: 1px solid rgba(220, 38, 38, 0.3) !important;
+  border-radius: 10px !important;
+  padding: 8px 16px !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+.tourist-call-btn:hover {
+  background: rgba(220, 38, 38, 0.2) !important;
+  transform: translateY(-1px) !important;
+}
+
+.tourist-emergency-alert {
+  background: rgba(220, 38, 38, 0.05) !important;
+  border: 1px solid rgba(220, 38, 38, 0.2) !important;
+  border-radius: 12px !important;
+  padding: 20px !important;
+  text-align: center !important;
+}
+
+.tourist-emergency-title {
+  color: #dc2626 !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  margin-bottom: 16px !important;
+}
+
+.tourist-emergency-btn {
+  background: linear-gradient(135deg, #dc2626, #ef4444) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 10px !important;
+  padding: 14px 24px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  font-size: 1rem !important;
+}
+
+.tourist-emergency-btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(220, 38, 38, 0.3) !important;
+}
+
+/* Travel Destinations */
+.tourist-destinations-subtitle {
+  color: #64748b !important;
+  font-size: 1rem !important;
+  margin: 0 0 20px 0 !important;
+}
+
+.tourist-destinations-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+}
+
+.tourist-destination-item {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 16px !important;
+  background: #f8fafc !important;
+  border-radius: 12px !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+.tourist-destination-info {
+  flex: 1 !important;
+}
+
+.tourist-destination-name {
+  color: #1e293b !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+}
+
+.tourist-destination-distance {
+  color: #64748b !important;
+  font-size: 0.85rem !important;
+  margin-top: 4px !important;
+}
+
+.tourist-navigate-btn {
+  background: rgba(59, 130, 246, 0.1) !important;
+  color: #3b82f6 !important;
+  border: 1px solid rgba(59, 130, 246, 0.3) !important;
+  border-radius: 10px !important;
+  padding: 8px 16px !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+.tourist-navigate-btn:hover {
+  background: rgba(59, 130, 246, 0.2) !important;
+  transform: translateY(-1px) !important;
+}
+
+.tourist-empty-destinations {
+  text-align: center !important;
+  padding: 40px 20px !important;
+}
+
+.tourist-explore-btn {
+  background: linear-gradient(135deg, #3b82f6, #60a5fa) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 10px !important;
+  padding: 14px 24px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  margin-top: 16px !important;
+  font-size: 1rem !important;
+}
+
+.tourist-explore-btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3) !important;
+}
+
+/* System Status */
+.tourist-system-status {
+  background: rgba(59, 130, 246, 0.05) !important;
+  border: 1px solid rgba(59, 130, 246, 0.2) !important;
+  border-radius: 16px !important;
+  padding: 24px 28px !important;
+}
+
+.tourist-status-content {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  gap: 20px !important;
+}
+
+.tourist-status-text {
+  flex: 1 !important;
+  min-width: 300px !important;
+}
+
+.tourist-status-title {
+  color: #1e293b !important;
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+  margin: 0 0 10px 0 !important;
+}
+
+.tourist-status-description {
+  color: #64748b !important;
+  font-size: 0.9rem !important;
+  line-height: 1.5 !important;
+}
+
+.tourist-status-indicator {
+  flex-shrink: 0 !important;
+}
+
+.tourist-status-badge-large {
+  background: rgba(34, 197, 94, 0.1) !important;
+  color: #16a34a !important;
+  border: 1px solid rgba(34, 197, 94, 0.3) !important;
+  padding: 10px 20px !important;
+  border-radius: 25px !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .tourist-main-sections,
+  .tourist-bottom-sections {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .tourist-home-wrapper {
+    padding: 15px !important;
+  }
+  
+  .tourist-container {
+    gap: 16px !important;
+  }
+  
+  .tourist-welcome-header {
+    padding: 20px !important;
+  }
+  
+  .tourist-welcome-content {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+  
+  .tourist-welcome-title {
+    font-size: 2rem !important;
+  }
+  
+  .tourist-dashboard-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .tourist-actions-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+  
+  .tourist-weather-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+  
+  .tourist-status-content {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .tourist-welcome-title {
+    font-size: 1.7rem !important;
+  }
+  
+  .tourist-stat-number {
+    font-size: 2.5rem !important;
+  }
+  
+  .tourist-section-body {
+    padding: 20px 24px 24px 24px !important;
+  }
+}
+
+/* Ensure all text is readable - Override any conflicting styles */
+.tourist-home-wrapper * {
+  color: inherit !important;
+  font-family: inherit !important;
+}
+
+.tourist-home-wrapper h1,
+.tourist-home-wrapper h2,
+.tourist-home-wrapper h3,
+.tourist-home-wrapper h4,
+.tourist-home-wrapper h5,
+.tourist-home-wrapper h6 {
+  color: #1e293b !important;
+  font-weight: 700 !important;
+}
+
+.tourist-home-wrapper p {
+  color: #64748b !important;
+}
+
+.tourist-home-wrapper button {
+  font-family: inherit !important;
+}
